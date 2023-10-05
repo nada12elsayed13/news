@@ -10,4 +10,12 @@ class ArticleModel {
     required this.subTitle,
     required this.url,
   });
+  factory ArticleModel.fromjson(json){
+    return ArticleModel(
+          image: json['urlToImage'] ?? "",
+          title: json['title'] ?? "",
+          subTitle: json['description'] ?? "",
+          url: json['url'] ?? "",
+        );
+  }
 }
